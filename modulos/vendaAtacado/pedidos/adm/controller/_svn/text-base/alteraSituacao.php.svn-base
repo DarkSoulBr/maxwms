@@ -1,0 +1,117 @@
+<?php
+/**
+* Arquivo de ações da Interface de estacionamento de Pedidos.
+*
+* Controla as ações ocorridas na interface chamadas pelo jquery.
+* Procure na pasta view/js as ações jquery.
+* Este arquivo segue os padroes estabelecidos no dTrade. 
+* 
+* @name Pedidos Adm View - Get Estacionamento
+* @category Pedidos
+* @package modulos/vendaAtacado/pedidos/adm/controller
+* @link modulos/vendaAtacado/pedidos/adm/controller/getEsacionamento.php
+* @version 1.0
+* @since Criado 19/05/2010
+* @author Wellington <wellington@centroatacadista.com.br>
+* @copyright MaxTrade
+*/
+	//pega da pasta de istalacao
+	$arr = explode("/", $_SERVER[REQUEST_URI]);
+	$root = $arr[1];
+
+	//pega as configurações do servidor
+	require_once($_SERVER[DOCUMENT_ROOT]."/$root/include/config.php");
+	require_once(DIR_ROOT.'/include/classes/JSON/JSON.php');
+	require_once (DIR_ROOT.'/modulos/vendaAtacado/pedidos/adm/model/EstacionamentoModel.php');
+	
+	$json = new Services_JSON();
+	$pvnumero = $_POST["pvnumero"];
+	$situacao = $_POST["situacao"];
+	$observacao = $_POST["observacao"];
+	$txtMail = $_POST['txtMail'];
+	$from = trim(strtolower($_POST['from']));
+	
+	$acao = $_POST['acao'];
+	$id = $_POST['id'];
+	
+	$model = new EstacionamentoModel();
+	print $json->encode($model->alteraSituacaoPedido($pvnumero, $situacao, $observacao));
+	
+	$path = DIR_ROOT.'/lib';
+    set_include_path ( get_include_path () . PATH_SEPARATOR . $path );
+        
+    require_once("Zend/Loader/Autoloader.php");
+    
+    $autoloader = Zend_Loader_Autoloader::getInstance ();
+    $autoloader->setFallbackAutoloader ( true );
+	
+ 
+	
+	$data = date("d/m/Y H:i:s");
+ 
+	
+	//configura para envio de email
+	$config = array ("auth"=>"login", "username"=>"maxtrade@centroatacadista.com.br", "password"=>"centro10");
+	//$config = array ("auth"=>"login", "username"=>"wellington@centroatacadista.com.br", "password"=>"centro");
+	$tr = new Zend_Mail_Transport_Smtp ('smtp.terra.com.br', $config);
+	
+	Zend_Mail::setDefaultTransport($tr);
+	//funcao para envio de email - Zend_Mail
+	$mail = new Zend_Mail();
+	$mail->setFrom ("$from", "MAXTrade");
+	
+	$mails = explode(";", $txtMail);
+	
+	foreach($mails as $value)
+	{
+	    if(trim($value))
+	    {
+	        $mail->addTo(trim($value));
+	    }
+	}
+	
+	$mail->addTo ('douglas@centroatacadista.com.br');
+	//$mail->addTo ('douglascavalini@gmail.com');
+	if($situacao=='4')
+	{
+	$msg = "Pedido numero $pvnumero contem as seguintes pendencias para sua liberacao!";
+	$mail->setSubject("Administração de Pedidos - Pendencias Pedido $pvnumero");
+	}
+	if($situacao=='5')
+	{
+		$msg = "Pedido numero $pvnumero foi negado para sua liberacao!";
+		$mail->setSubject("Administração de Pedidos - Pedido $pvnumero negado");
+	}
+	if($situacao=='22')
+	{
+		$msg = "Pedido numero $pvnumero foi autorizado sua liberacao!";
+		$mail->setSubject("Administração de Pedidos - Autorizado Pedido $pvnumero");
+	}
+	$msg .= "<br /><br />" . nl2br($observacao);
+	$msg .= "<br /><br /><h5>" . $data .'</ h5>';
+	
+	
+	$mail->setBodyHTML($msg);
+	$mail->send();
+	
+	//print true;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	if($acao=='1')
+	{
+	print $json->encode($model->verificaPrefechamento2($id));
+	}
+	?>

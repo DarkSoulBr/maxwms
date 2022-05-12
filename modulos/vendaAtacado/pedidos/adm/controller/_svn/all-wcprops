@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/dtrade/!svn/ver/1633/trunk/sites/dtrade/modulos/vendaAtacado/pedidos/adm/controller
+END
+VerificaPrefechamento.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/dtrade/!svn/ver/1580/trunk/sites/dtrade/modulos/vendaAtacado/pedidos/adm/controller/VerificaPrefechamento.php
+END
+getEstacionamento.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/dtrade/!svn/ver/1457/trunk/sites/dtrade/modulos/vendaAtacado/pedidos/adm/controller/getEstacionamento.php
+END
+acoes.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/dtrade/!svn/ver/1580/trunk/sites/dtrade/modulos/vendaAtacado/pedidos/adm/controller/acoes.php
+END
+getPedidoEstacionamento.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/dtrade/!svn/ver/1214/trunk/sites/dtrade/modulos/vendaAtacado/pedidos/adm/controller/getPedidoEstacionamento.php
+END
+alteraSituacao.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/dtrade/!svn/ver/1633/trunk/sites/dtrade/modulos/vendaAtacado/pedidos/adm/controller/alteraSituacao.php
+END
+enviarMensagem.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/dtrade/!svn/ver/1633/trunk/sites/dtrade/modulos/vendaAtacado/pedidos/adm/controller/enviarMensagem.php
+END

@@ -1,0 +1,31 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+
+# testing
+
+# production
+
+# connection
+/_app/Config.inc.php
+/include/conexao.inc.php
+/include/classes/Conexao.php
+
+# misc
+*.rar
+/arquivos
+/font
+/fonts
+/jquery
+/lib
+/libs
+/nbproject
+/uploads
+/vendor
+/include/classes/Excel
+/include/classes/JSON
+/include/classes/PEAR
+/include/classes/php_writeexcel
+/include/classes/php_writeexcel-0.3.0
+/include/classes/PHPExcel
+/include/classes/spout-2.7.3

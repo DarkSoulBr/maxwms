@@ -1,0 +1,174 @@
+/***************************************
+Estilo Padrão do Sistema dTrade
+***************************************/
+	div
+	{
+		font-family: Verdana;
+		font-size: 12px;
+	}
+
+	table
+	{
+		font-family: Verdana;
+		font-size: 12px;
+	}
+
+	
+
+/***************************************
+FORMULARIO
+***************************************/
+
+	/* estilo da label de erro na validação	*/
+	form label.error, label.error
+	{
+		color: red;
+		font-style: italic;
+	}
+	
+	/* estilo dos campos input aplica-se a todos */
+	input
+	{
+		font-family: Verdana; font-size: 12px;
+		border: 1px solid black;		
+	}
+	
+	/* estilo do campo input ao receber o foco */
+	input:focus 
+	{ 
+		border: 1px dotted black; 
+	}
+	
+	/* estilo do campo input no erro de validação */
+	input.error 
+	{ 
+		border: 1px dotted red; 
+	}
+	
+	/*	estilo padrão do campo checkbox aplica-se a todos */
+	input.checkbox 
+	{
+		border: none;
+	}
+	
+	/* estilo padrão do campo select aplica-se a todos */
+	select
+	{
+		border: 1px solid black;
+		font-family: Verdana; font-size: 12px;
+	}
+	
+	/* estilo do campo select ao receber o foco */
+	select:focus 
+	{ 
+		border: 1px solid black; 
+	}
+	
+	/* estilo do campo select no erro de validação */
+	select.error 
+	{ 
+		border: 1px solid red; 
+	}
+	
+	/* estilo dos campos textarea aplica-se a todos */
+	textarea
+	{
+		font-family: Verdana; font-size: 12px;
+		border: 1px solid black;		
+	}
+	
+	/* estilo do campo textarea ao receber o foco */
+	textarea:focus 
+	{ 
+		border: 1px dotted black; 
+	}
+			
+	/* estilo do campo textarea ao receber o foco */
+	textarea.underline:hover 
+	{ 
+		text-decoration: underline; 
+	}
+	
+	/* estilo do campo textarea no erro de validação */
+	textarea.error 
+	{ 
+		border: 1px dotted red; 
+	}
+	
+	/*estilo da caixa de mensagem adicionada no topo*/
+	#message_box 
+	{ 
+       position: absolute; 
+       left: 5; 
+       z-index: 10;
+	   padding:5px;
+       text-align:left;
+       width:98%;
+     }
+
+/***************************************
+	upload de arquivos
+***************************************/
+ 
+	#swfupload-control p
+	{
+		margin:10px 5px; 
+		font-size:0.9em;
+	}
+	
+	#log
+	{
+		margin:0; 
+		padding:0; 
+		width:500px;
+	}
+	
+	#log li
+	{ 
+		list-style-position:inside; 
+		margin:2px; 
+		border:1px solid #ccc; 
+		padding:10px; 
+		font-size:12px; 
+		font-family:Arial, Helvetica, sans-serif; 
+		color:#333; 
+		background:#fff; 
+		position:relative;
+	}
+	
+	#log li .progressbar
+	{ 
+		border:1px solid #333; 
+		height:5px; 
+		background:#fff; 
+	}
+	
+	#log li .progress
+	{ 
+		background:#999; 
+		width:0%; 
+		height:5px; 
+	}
+	
+	#log li p
+	{ 
+		margin:0; 
+		line-height:18px; 
+	}
+	
+	#log li.success
+	{ 
+		border:1px solid #339933; 
+		background:#ccf9b9; 
+	}
+	
+	#log li span.cancel
+	{ 
+		position:absolute; 
+		top:5px; 
+		right:5px; 
+		width:20px; 
+		height:20px;
+		background:url('js/swfupload/cancel.png') no-repeat; 
+		cursor:pointer; 
+	}

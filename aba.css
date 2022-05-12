@@ -1,0 +1,82 @@
+
+/* Container das ABAS */ 
+.tabs-container {
+    position: relative;
+    height: 660px;
+    max-width: 98%;
+    margin: 0 auto;
+	z-index: 9;
+}
+.tabs-container p {
+    margin: 0;
+    padding: 0;
+}
+.tabs-container:after {
+    content: '.';
+    display: block;
+    clear: both;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    visibility: none;
+}
+ 
+/* ABAS */
+input.tabs {
+    display: none;
+}
+input.tabs + label + div {
+
+    /*width: 98%;*/
+	width: 1000px;     /*LARGURA*/
+	
+    opacity: 0;
+    position: absolute;
+    /*background:#eee;*/
+	
+	background:#CCCCCC;
+	
+    top: 30px;
+    left: 0;
+    height: 360px;    /*COMPRIMENTO*/
+    padding: 10px;
+    z-index: -1;
+    transition: opacity ease-in-out .3s;
+	
+	border-style: ridge;
+		
+}
+input.tabs:checked + label + div {
+    opacity: 1;
+    z-index: 1000;
+}
+ 
+/* Labels */
+input.tabs + label {
+    line-height: 30px;
+    padding: 0 20px;
+    float: left;
+    /*background: #444;*/
+	
+	background: #9db6e7;  /* COR DA ABA OCULTA*/
+	
+    color: #fff;
+    cursor: pointer;
+    transition: background ease-in-out .3s;
+	
+	border-radius:10px 10px 0 0;
+	
+}
+input.tabs:checked + label {
+    color: #000;
+	
+	/*background: #eee;*/
+	background: #3366CC;   /* COR DA ABA SELECIONADA*/
+	
+	border-radius:10px 10px 0 0;
+    
+	
+}
+
+
+
