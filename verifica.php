@@ -305,6 +305,12 @@ echo "<link rel='icon' href='images/favicons.png'/>";
                             </ul>
                         </li>
                         <li><a href="tabelasmovimentacao.php"><i class="icon-list"></i> Tabela Movimentação</a></li>
+                        <li>
+                            <a href="#"><i class="icon-print"></i> Importação NF-e&nbsp;</a>
+                            <ul >                                    
+                                <li><a href="importanfex.php">Fornecedor</a></li>                                
+                            </ul>        
+                        </li>
                     </ul>
                 </li>    
                 <li>
