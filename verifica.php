@@ -116,7 +116,66 @@ echo "<link rel='icon' href='images/favicons.png'/>";
                             </ul>
                         </li>
                     </ul>
-                </li>                
+                </li>   
+                <li>
+                    <a href="#">Recebimento</a>
+                    <ul>
+                        <li>
+                            <a href="#"><i class="icon-wrench"></i> Pedidos&nbsp;</a>                            
+                            <ul>
+                                <li><a href="incluirpedcompra.php">Inclusão</a></li>
+                                <li><a href="alterarpedcompra.php">Alteração</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="icon-check"></i> Baixas&nbsp;</a>                            
+                            <ul>
+                                <li><a href="pedcomprabaixanovo.php">Baixa de Pedidos</a></li>                                
+                                <li><a href="pedcomprabaixacancelanovo.php">Cancela Baixa</a></li>
+                                <li><a href="pedcomprabaixaatualizanovo.php">Atualiza Estoque</a></li>
+                                <li><a href="pedcomprabaixacancatualnovo.php">Cancela Atualização</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="icon-search"></i> Consultas&nbsp;</a>
+                            <ul >
+                                <li><a href="pedcompracons.php"> Pedidos</a></li>                            
+                                <li>
+                                    <a href="#"> Baixados</a>
+                                    <ul >
+                                        <li><a href="consultapedbaixado.php">Data</a></li>                                                                                                                                                                                
+                                        <li><a href="consultapedbaicomfornecedor.php">Fornecedor</a></li>                                        
+                                    </ul>
+                                </li> 
+                                <li><a href="consultapedaberto.php"> Emissão</a></li>                                                        
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="icon-list"></i> Relatórios&nbsp;</a>
+                            <ul>                                
+                                <li><a href="pedcompraimpressao.php"> Baixa Física</a></li>                                                                
+                                <li>
+                                    <a href="#"> Saldo</a>
+                                    <ul >
+                                        <li><a href="relatoriosalpedcomfornecedor.php">Fornecedor</a></li>
+                                        <li><a href="relatoriosalpedcomgrupos.php">Grupo</a></li>                                                                                                    
+                                    </ul>
+                                </li>                                                                                      
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Estoque</a>
+                    <ul>
+                        <li><a href="#"><i class="icon-list"></i> Movimentação&nbsp;</a>
+                          <ul>
+                            <li><a href="consultamovimentacao2.php">Analítico</a></li>
+                            <li><a href="consultamovimentacao3.php">Sintético</a></li>                            
+                          </ul>
+                        </li>
+                    </ul>
+                </li>
                 <li>
                     <a href="#">WMS</a>
                     <ul>
@@ -245,6 +304,7 @@ echo "<link rel='icon' href='images/favicons.png'/>";
                                 <li><a href="importaedi3.php">Destrava</a></li>                                                  
                             </ul>
                         </li>
+                        <li><a href="tabelasmovimentacao.php"><i class="icon-list"></i> Tabela Movimentação</a></li>
                     </ul>
                 </li>    
                 <li>
