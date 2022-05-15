@@ -174,6 +174,53 @@ echo "<link rel='icon' href='images/favicons.png'/>";
                             <li><a href="consultamovimentacao3.php">Sintético</a></li>                            
                           </ul>
                         </li>
+                        <li>
+                            <a href="#"><i class="icon-folder-open"></i> Inventário&nbsp;</a>
+                            <ul>                                    
+                                <li><a href="aberturainventariotodos.php">Abertura</a></li>
+                                <li><a href="digitacaoinventario.php"> Digitação</a></li>                            
+                                <li><a href="importainvent.php"> Importação</a></li>                                  
+                                <li><a href="encerramentoinventario.php"> Encerramento</a></li>                                  
+                                <li>
+                                    <a href="#"> Relatórios</a>
+                                    <ul>
+                                        <li><a href="relatoriosobraantigoinventario.php">Sobra</a></li>
+                                        <li><a href="relatoriosobrainventario.php">Falta</a></li>                                                                                                    
+                                        <li><a href="relatorioresinventario.php">Resultado</a></li>                                                                                                    
+                                        <li><a href="relatoriofinalinventario.php">Final</a></li>                                                                                                    
+                                        <li><a href="relatoriocontinventario.php">Contagem</a></li>                                                                                                    
+                                    </ul>
+                                </li>                                               
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="icon-edit"></i> Coletor&nbsp;</a>
+                            <ul >                                                     
+                                <li>
+                                    <a href="#"> Cadastros</a>
+                                    <ul >
+                                            <li><a href="setor.php">Setores</a></li>                                                                                                                                                                                
+                                            <li><a href="contagem.php">Contagens</a></li>                                        
+                                            <li><a href="coletores.php">Coletores</a></li>                                        
+                                    </ul>
+                                </li> 
+                                <li><a href="aberturacontagem.php"> Abertura</a></li> 
+                                <li><a href="digitacontagem.php"> Contagem</a></li> 
+                                <li><a href="importacontagem.php"> Importação</a></li> 
+                                <li><a href="atualizanaocontados.php"> At. Não Contados</a></li> 
+                                <li><a href="encerracontagem.php"> Encerramento</a></li> 
+                                <li><a href="finalizacontagem.php"> Finalização</a></li> 
+                                <li>
+                                    <a href="#"> Excel</a>
+                                    <ul >
+                                            <li><a href="relatoriogeracontagemcoletor.php">Coletor</a></li>
+                                            <li><a href="relatoriogeracontagemsetor.php">Setor</a></li>                                                                                                                                          
+                                            <li><a href="relatoriogeracontagem.php">Contagem</a></li>                                        
+                                            <li><a href="relatoriogeracontagemcompara.php">Comparação</a></li>                                        
+                                    </ul>
+                                </li>                                                                                      
+                            </ul>
+                        </li>
                     </ul>
                 </li>
                 <li>
